@@ -99,6 +99,11 @@ async def get_recommendation(user_id: str):
         )
 
         recommended_card = json.loads(response.text.strip())
+        # --- Add recommended cards to MongoDB ---
+        users.update_one(
+            {"user_id": user_id},
+            {"$set": {"gemini_recommendations": recommended_card}}
+        )
         return recommended_card
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Gemini API call failed: {e}")
