@@ -21,7 +21,7 @@ try:
     mongo_uri = os.getenv("MONGODB_URI")
     client = MongoClient(mongo_uri)
     db = client.get_database("credit_card_db")
-    user_answers_collection = db.get_collection("user_answers")
+    users = db.get_collection("user_answers")
 except Exception as e:
     raise HTTPException(status_code=500, detail=f"Failed to connect to MongoDB: {e}")
 
@@ -44,7 +44,7 @@ async def submit_answers(user_data: UserAnswers):
     Receives and stores user answers in MongoDB.
     """
     try:
-        user_answers_collection.insert_one(user_data.dict())
+        users.insert_one(user_data.dict())
         return {"message": "Answers saved successfully"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to save data: {e}")
@@ -55,7 +55,7 @@ async def get_recommendation(user_id: str):
     Retrieves user answers, gets a Gemini recommendation, and returns the result.
     """
     # 1. Retrieve user data from MongoDB
-    user_doc = user_answers_collection.find_one({"user_id": user_id})
+    user_doc = users.find_one({"user_id": user_id})
     if not user_doc:
         raise HTTPException(status_code=404, detail="User not found.")
 
