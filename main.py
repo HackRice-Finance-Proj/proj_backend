@@ -1,13 +1,13 @@
-from fastapi import FastAPI, HTTPException, Depends
-from pydantic import BaseModel
-from pymongo import MongoClient
-from dotenv import load_dotenv
-import google.generativeai as genai
+from fastapi import FastAPI, HTTPException, Depends # type: ignore
+from pydantic import BaseModel # type: ignore
+from pymongo import MongoClient # type: ignore
+from dotenv import load_dotenv # type: ignore
+import google.generativeai as genai # type: ignore
 import json
 import os
 
 # --- Auth0 Libraries & Configuration ---
-from fastapi_auth0 import Auth0, Auth0User
+from fastapi_auth0 import Auth0, Auth0User #type: ignore
 
 load_dotenv()
 
