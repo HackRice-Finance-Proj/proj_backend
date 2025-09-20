@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
 from pydantic import BaseModel
 from pymongo import MongoClient
 from dotenv import load_dotenv
@@ -6,8 +6,28 @@ import google.generativeai as genai
 import json
 import os
 
-# --- Configuration & Setup ---
+# --- Auth0 Libraries & Configuration ---
+from fastapi_auth0 import Auth0, Auth0User
+
 load_dotenv()
+
+AUTH0_DOMAIN = os.getenv("AUTH0_DOMAIN")
+AUTH0_API_AUDIENCE = os.getenv("AUTH0_API_AUDIENCE")
+
+if not AUTH0_DOMAIN or not AUTH0_API_AUDIENCE:
+    raise ValueError("Auth0 environment variables not set.")
+
+auth = Auth0(
+    domain=AUTH0_DOMAIN,
+    api_audience=AUTH0_API_AUDIENCE,
+    scopes={
+        "openid": "OpenID Connect", 
+        "profile": "User profile information", 
+        "email": "User email address"
+    }
+)
+
+# --- Other Configurations & Setup ---
 app = FastAPI()
 
 # Load API keys from .env
@@ -21,7 +41,7 @@ try:
     mongo_uri = os.getenv("MONGODB_URI")
     client = MongoClient(mongo_uri)
     db = client.get_database("credit_card_db")
-    users = db.get_collection("user_answers")
+    users = db.get_collection("users")
 except Exception as e:
     raise HTTPException(status_code=500, detail=f"Failed to connect to MongoDB: {e}")
 
@@ -32,12 +52,12 @@ try:
 except FileNotFoundError:
     raise HTTPException(status_code=500, detail="credit_cards.json file not found.")
 
-# --- Pydantic Model for Data Validation ---
+# --- Pydantic Models for Data Validation ---
 class UserAnswers(BaseModel):
     user_id: str
     answers: dict
 
-# --- API Endpoints ---
+# --- Existing API Endpoints ---
 @app.post("/submit-answers")
 async def submit_answers(user_data: UserAnswers):
     """
@@ -54,12 +74,10 @@ async def get_recommendation(user_id: str):
     """
     Retrieves user answers, gets a Gemini recommendation, and returns the result.
     """
-    # 1. Retrieve user data from MongoDB
     user_doc = users.find_one({"user_id": user_id})
     if not user_doc:
         raise HTTPException(status_code=404, detail="User not found.")
 
-    # 2. Prepare the prompt for Gemini (simplified)
     prompt_content = f"""
     The user's answers are: {json.dumps(user_doc['answers'])}
     The list of available credit cards is: {json.dumps(cards_data)}
@@ -67,7 +85,6 @@ async def get_recommendation(user_id: str):
     Do not add any additional text or formatting.
     """
 
-    # 3. Call the Gemini API with a forced JSON response
     try:
         model = genai.GenerativeModel('gemini-1.5-flash')
         response = await model.generate_content_async(
@@ -75,10 +92,26 @@ async def get_recommendation(user_id: str):
             generation_config={"response_mime_type": "application/json"}
         )
 
-        # The API is now guaranteed to return valid JSON, so no JSON parsing is needed.
         recommended_card = json.loads(response.text.strip())
         return recommended_card
     except Exception as e:
-        # This will catch all errors, including connection issues
-        print(f"Gemini API call failed: {e}")
         raise HTTPException(status_code=500, detail=f"Gemini API call failed: {e}")
+
+# --- NEW Auth0 Endpoints ---
+@app.get("/api/public")
+async def public_endpoint():
+    """
+    This endpoint does not require authentication.
+    """
+    return {"message": "Hello from a public endpoint!"}
+
+@app.get("/api/private")
+async def private_endpoint(auth_user: Auth0User = Depends(auth.get_user)):
+    """
+    This endpoint requires a valid JWT token.
+    auth_user will contain the decoded user info from the token.
+    """
+    return {
+        "message": f"Hello from a private endpoint! You are authenticated as {auth_user.email}.",
+        "user_info": auth_user.dict()
+    }
