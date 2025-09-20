@@ -81,8 +81,14 @@ async def get_recommendation(user_id: str):
     prompt_content = f"""
     The user's answers are: {json.dumps(user_doc['answers'])}
     The list of available credit cards is: {json.dumps(cards_data)}
-    Based on the user's answers, find the single best credit card and return its full JSON object.
-    Do not add any additional text or formatting.
+    Based on the user's answers, find the three single best credit cards and return a JSON array of three objects. Each object should have the following keys:
+    - "rank": An integer from 1 to 3, where 1 is the best recommendation.
+    - "name": The name of the credit card.
+    - "photo_url": The URL for the credit card's photo.
+    - "description": A detailed, 2-3 sentence explanation of why this card is the best recommendation for the user, referencing their answers.
+    - "acquisition_steps": A clear, numbered list of steps for how the user can apply for and acquire the credit card.
+
+    Ensure the response is a valid JSON object.
     """
 
     try:
