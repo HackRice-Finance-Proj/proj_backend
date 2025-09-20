@@ -33,6 +33,156 @@
     ]
   },
   {
+    "id": "capital-one-venture",
+    "name": "Capital One Venture Rewards Credit Card",
+    "issuer": "Capital One",
+    "card_type": "Travel",
+    "credit_score_range": "Good to Excellent",
+    "annual_fee": 95,
+    "apr_range": "19.99% - 29.99% Variable",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/58e4cc7c-f559-11eb-b50e-577c1a5e54c3/8b8e8fdeef1a2d95e58f169d11e4c8b3a7fe6c2b5e36f3dc9f31c6e9e1b5a2f4.jpg",
+    "rewards_structure": [
+      {
+        "category": "General",
+        "rate": 2,
+        "unit": "miles",
+        "description": "2x miles on every purchase"
+      }
+    ],
+    "intro_bonus": {
+      "bonus_amount": 75000,
+      "spend_requirement": 4000,
+      "time_frame_months": 3,
+      "description": "Earn 75,000 bonus miles after you spend $4,000 on purchases in the first 3 months."
+    },
+    "features_and_benefits": [
+      "No foreign transaction fees",
+      "Transfer miles to 15+ travel loyalty programs"
+    ],
+    "best_for": [
+      "Travel",
+      "Flat Rate Rewards"
+    ]
+  },
+  {
+    "id": "capital-one-savor-one",
+    "name": "Capital One SavorOne Cash Rewards Credit Card",
+    "issuer": "Capital One",
+    "card_type": "Cashback",
+    "credit_score_range": "Good to Excellent",
+    "annual_fee": 0,
+    "apr_range": "19.99% - 29.99% Variable",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/82e4d6de-f559-11eb-b50e-577c1a5e54c3/1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4.jpg",
+    "rewards_structure": [
+      {
+        "category": "Dining",
+        "rate": 3,
+        "unit": "percent",
+        "description": "3% cash back on dining, entertainment, popular streaming services and grocery stores"
+      },
+      {
+        "category": "General",
+        "rate": 1,
+        "unit": "percent",
+        "description": "1% cash back on all other purchases"
+      }
+    ],
+    "intro_bonus": {
+      "bonus_amount": 200,
+      "spend_requirement": 500,
+      "time_frame_months": 3,
+      "description": "Earn $200 cash back after you spend $500 on purchases in the first 3 months."
+    },
+    "features_and_benefits": [
+      "No annual fee",
+      "No foreign transaction fees"
+    ],
+    "best_for": [
+      "Dining",
+      "Entertainment",
+      "No Annual Fee"
+    ]
+  },
+  {
+    "id": "bank-of-america-travel-rewards",
+    "name": "Bank of America® Travel Rewards Credit Card",
+    "issuer": "Bank of America",
+    "card_type": "Travel",
+    "credit_score_range": "Good to Excellent",
+    "annual_fee": 0,
+    "apr_range": "18.99% - 28.99% Variable",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/c0f5d2e8-3a1b-4c5d-9e2f-8b7a6c3d0e9f/bank-of-america-travel-rewards.jpg",
+    "rewards_structure": [
+      {
+        "category": "General",
+        "rate": 1.5,
+        "unit": "points",
+        "description": "1.5 points per $1 spent on all purchases"
+      }
+    ],
+    "intro_bonus": {
+      "bonus_amount": 25000,
+      "spend_requirement": 1000,
+      "time_frame_months": 3,
+      "description": "Earn 25,000 online bonus points after you make at least $1,000 in purchases in the first 90 days."
+    },
+    "features_and_benefits": [
+      "No annual fee",
+      "No foreign transaction fees",
+      "No expiration on points"
+    ],
+    "best_for": [
+      "Travel",
+      "No Annual Fee",
+      "Simple Rewards"
+    ]
+  },
+  {
+    "id": "bank-of-america-cash-rewards",
+    "name": "Bank of America® Cash Rewards Credit Card",
+    "issuer": "Bank of America",
+    "card_type": "Cashback",
+    "credit_score_range": "Good to Excellent",
+    "annual_fee": 0,
+    "apr_range": "18.99% - 28.99% Variable",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/a1b2c3d4-5e6f-7g8h-9i0j-1k2l3m4n5o6p/bank-of-america-cash-rewards.jpg",
+    "rewards_structure": [
+      {
+        "category": "Choice Category",
+        "rate": 3,
+        "unit": "percent",
+        "description": "3% cash back in the category of your choice: gas, online shopping, dining, travel, drug stores, or home improvement/furnishings"
+      },
+      {
+        "category": "Grocery",
+        "rate": 2,
+        "unit": "percent",
+        "description": "2% cash back at grocery stores and wholesale clubs"
+      },
+      {
+        "category": "General",
+        "rate": 1,
+        "unit": "percent",
+        "description": "1% cash back on all other purchases"
+      }
+    ],
+    "intro_bonus": {
+      "bonus_amount": 200,
+      "spend_requirement": 1000,
+      "time_frame_months": 3,
+      "description": "$200 online cash rewards bonus after you make at least $1,000 in purchases in the first 90 days."
+    },
+    "features_and_benefits": [
+      "No annual fee",
+      "Choose your 3% cash back category"
+    ],
+    "best_for": [
+      "Cashback",
+      "Customizable Rewards",
+      "No Annual Fee"
+    ]
+  },
+  {
     "id": "chase-sapphire-preferred",
     "name": "Chase Sapphire Preferred® Card",
     "issuer": "Chase",
@@ -91,6 +241,239 @@
     ]
   },
   {
+    "id": "chase-sapphire-reserve",
+    "name": "Chase Sapphire Reserve®",
+    "issuer": "Chase",
+    "card_type": "Premium Travel",
+    "credit_score_range": "Excellent",
+    "annual_fee": 550,
+    "apr_range": "22.49% - 29.49% Variable",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/d1e2f3g4-5h6i-7j8k-9l0m-1n2o3p4q5r6s/chase-sapphire-reserve.jpg",
+    "rewards_structure": [
+      {
+        "category": "Travel",
+        "rate": 10,
+        "unit": "points",
+        "description": "10x points on hotels and car rentals when you purchase through Chase Ultimate Rewards"
+      },
+      {
+        "category": "Dining",
+        "rate": 3,
+        "unit": "points",
+        "description": "3x points on dining"
+      },
+      {
+        "category": "Travel Direct",
+        "rate": 3,
+        "unit": "points",
+        "description": "3x points on travel"
+      },
+      {
+        "category": "General",
+        "rate": 1,
+        "unit": "points",
+        "description": "1x point on all other purchases"
+      }
+    ],
+    "intro_bonus": {
+      "bonus_amount": 60000,
+      "spend_requirement": 4000,
+      "time_frame_months": 3,
+      "description": "60,000 bonus points after you spend $4,000 on purchases in the first 3 months."
+    },
+    "features_and_benefits": [
+      "$300 annual travel credit",
+      "Priority Pass Select membership",
+      "No foreign transaction fees"
+    ],
+    "best_for": [
+      "Premium Travel",
+      "Lounge Access",
+      "High Spenders"
+    ]
+  },
+  {
+    "id": "chase-freedom-unlimited",
+    "name": "Chase Freedom Unlimited®",
+    "issuer": "Chase",
+    "card_type": "Cashback",
+    "credit_score_range": "Good to Excellent",
+    "annual_fee": 0,
+    "apr_range": "20.49% - 29.24% Variable",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/2a3b4c5d-6e7f-8g9h-0i1j-2k3l4m5n6o7p/chase-freedom-unlimited.jpg",
+    "rewards_structure": [
+      {
+        "category": "Dining",
+        "rate": 3,
+        "unit": "percent",
+        "description": "3% cash back on dining"
+      },
+      {
+        "category": "Drugstore",
+        "rate": 3,
+        "unit": "percent",
+        "description": "3% cash back on drugstore purchases"
+      },
+      {
+        "category": "General",
+        "rate": 1.5,
+        "unit": "percent",
+        "description": "1.5% cash back on all other purchases"
+      }
+    ],
+    "intro_bonus": {
+      "bonus_amount": 200,
+      "spend_requirement": 500,
+      "time_frame_months": 3,
+      "description": "$200 bonus after you spend $500 on purchases in your first 3 months."
+    },
+    "features_and_benefits": [
+      "No annual fee",
+      "0% intro APR for 15 months on purchases"
+    ],
+    "best_for": [
+      "Cashback",
+      "No Annual Fee",
+      "Everyday Use"
+    ]
+  },
+  {
+    "id": "rbfcu-platinum-rewards",
+    "name": "RBFCU Platinum Rewards Credit Card",
+    "issuer": "RBFCU",
+    "card_type": "Rewards",
+    "credit_score_range": "Good to Excellent",
+    "annual_fee": 0,
+    "apr_range": "13.25% - 18.00% Variable",
+    "image_url": "default",
+    "rewards_structure": [
+      {
+        "category": "Gas",
+        "rate": 3,
+        "unit": "points",
+        "description": "3x points on gas purchases"
+      },
+      {
+        "category": "Grocery",
+        "rate": 2,
+        "unit": "points",
+        "description": "2x points on grocery purchases"
+      },
+      {
+        "category": "General",
+        "rate": 1,
+        "unit": "points",
+        "description": "1x point on all other purchases"
+      }
+    ],
+    "intro_bonus": {
+      "bonus_amount": null,
+      "spend_requirement": null,
+      "time_frame_months": null,
+      "description": "No sign-up bonus currently available."
+    },
+    "features_and_benefits": [
+      "No annual fee",
+      "Competitive APR for credit union members"
+    ],
+    "best_for": [
+      "Credit Union Members",
+      "Low APR",
+      "Gas Rewards"
+    ]
+  },
+  {
+    "id": "citi-double-cash",
+    "name": "Citi® Double Cash Card",
+    "issuer": "Citibank",
+    "card_type": "Cashback",
+    "credit_score_range": "Good to Excellent",
+    "annual_fee": 0,
+    "apr_range": "19.24% - 29.24% Variable",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r/citi-double-cash.jpg",
+    "rewards_structure": [
+      {
+        "category": "General",
+        "rate": 2,
+        "unit": "percent",
+        "description": "2% cash back on all purchases (1% when you buy + 1% as you pay)"
+      }
+    ],
+    "intro_bonus": {
+      "bonus_amount": 200,
+      "spend_requirement": 1500,
+      "time_frame_months": 6,
+      "description": "$200 cash back after you spend $1,500 on purchases in the first 6 months."
+    },
+    "features_and_benefits": [
+      "No annual fee",
+      "No category restrictions",
+      "0% intro APR for 18 months on balance transfers"
+    ],
+    "best_for": [
+      "Flat Rate Cashback",
+      "No Annual Fee",
+      "Balance Transfers"
+    ]
+  },
+  {
+    "id": "citi-premier",
+    "name": "Citi Premier® Card",
+    "issuer": "Citibank",
+    "card_type": "Travel",
+    "credit_score_range": "Good to Excellent",
+    "annual_fee": 95,
+    "apr_range": "21.24% - 28.24% Variable",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s/citi-premier.jpg",
+    "rewards_structure": [
+      {
+        "category": "Travel",
+        "rate": 3,
+        "unit": "points",
+        "description": "3x points on air travel and hotels"
+      },
+      {
+        "category": "Gas",
+        "rate": 3,
+        "unit": "points",
+        "description": "3x points on gas stations and EV charging stations"
+      },
+      {
+        "category": "Grocery",
+        "rate": 3,
+        "unit": "points",
+        "description": "3x points on supermarkets"
+      },
+      {
+        "category": "Restaurants",
+        "rate": 3,
+        "unit": "points",
+        "description": "3x points on restaurants"
+      },
+      {
+        "category": "General",
+        "rate": 1,
+        "unit": "points",
+        "description": "1x point on all other purchases"
+      }
+    ],
+    "intro_bonus": {
+      "bonus_amount": 80000,
+      "spend_requirement": 4000,
+      "time_frame_months": 3,
+      "description": "80,000 bonus points after you spend $4,000 on purchases in the first 3 months."
+    },
+    "features_and_benefits": [
+      "No foreign transaction fees",
+      "Transfer points to airline and hotel partners"
+    ],
+    "best_for": [
+      "Travel",
+      "Multiple Bonus Categories",
+      "Point Transfers"
+    ]
+  },
+  {
     "id": "amex-platinum",
     "name": "The Platinum Card® from American Express",
     "issuer": "American Express",
@@ -137,6 +520,148 @@
     ]
   },
   {
+    "id": "amex-gold",
+    "name": "American Express® Gold Card",
+    "issuer": "American Express",
+    "card_type": "Travel",
+    "credit_score_range": "Good to Excellent",
+    "annual_fee": 250,
+    "apr_range": "See Pay Over Time APR",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/5e6f7g8h-9i0j-1k2l-3m4n-5o6p7q8r9s0t/amex-gold.jpg",
+    "rewards_structure": [
+      {
+        "category": "Dining",
+        "rate": 4,
+        "unit": "points",
+        "description": "4x points on restaurants worldwide, plus takeout and delivery"
+      },
+      {
+        "category": "Supermarkets",
+        "rate": 4,
+        "unit": "points",
+        "description": "4x points at U.S. supermarkets (on up to $25,000 per year)"
+      },
+      {
+        "category": "Flights",
+        "rate": 3,
+        "unit": "points",
+        "description": "3x points on flights booked directly with airlines or amextravel.com"
+      },
+      {
+        "category": "General",
+        "rate": 1,
+        "unit": "points",
+        "description": "1x point on all other eligible purchases"
+      }
+    ],
+    "intro_bonus": {
+      "bonus_amount": 60000,
+      "spend_requirement": 4000,
+      "time_frame_months": 6,
+      "description": "Earn 60,000 Membership Rewards points after you spend $4,000 on purchases on your new Card in your first 6 months."
+    },
+    "features_and_benefits": [
+      "Up to $120 annual dining credit",
+      "Up to $120 annual Uber Cash",
+      "No foreign transaction fees"
+    ],
+    "best_for": [
+      "Dining",
+      "Grocery Shopping",
+      "Travel"
+    ]
+  },
+  {
+    "id": "amex-blue-cash-preferred",
+    "name": "Blue Cash Preferred® Card from American Express",
+    "issuer": "American Express",
+    "card_type": "Cashback",
+    "credit_score_range": "Good to Excellent",
+    "annual_fee": 95,
+    "apr_range": "19.24% - 29.99% Variable",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/6f7g8h9i-0j1k-2l3m-4n5o-6p7q8r9s0t1u/amex-blue-cash-preferred.jpg",
+    "rewards_structure": [
+      {
+        "category": "Supermarkets",
+        "rate": 6,
+        "unit": "percent",
+        "description": "6% cash back at U.S. supermarkets (on up to $6,000 per year)"
+      },
+      {
+        "category": "Streaming Services",
+        "rate": 6,
+        "unit": "percent",
+        "description": "6% cash back on select U.S. streaming subscriptions"
+      },
+      {
+        "category": "Transit",
+        "rate": 3,
+        "unit": "percent",
+        "description": "3% cash back on transit (including taxis, rideshare, parking, tolls, trains, buses and more)"
+      },
+      {
+        "category": "Gas",
+        "rate": 3,
+        "unit": "percent",
+        "description": "3% cash back at U.S. gas stations"
+      },
+      {
+        "category": "General",
+        "rate": 1,
+        "unit": "percent",
+        "description": "1% cash back on all other purchases"
+      }
+    ],
+    "intro_bonus": {
+      "bonus_amount": 300,
+      "spend_requirement": 3000,
+      "time_frame_months": 6,
+      "description": "Earn $300 statement credit after you spend $3,000 in purchases on your new Card in your first 6 months."
+    },
+    "features_and_benefits": [
+      "0% intro APR for 12 months on purchases",
+      "No foreign transaction fees"
+    ],
+    "best_for": [
+      "Grocery Shopping",
+      "Streaming Services",
+      "Gas Purchases"
+    ]
+  },
+  {
+    "id": "wells-fargo-active-cash",
+    "name": "Wells Fargo Active Cash® Card",
+    "issuer": "Wells Fargo",
+    "card_type": "Cashback",
+    "credit_score_range": "Good to Excellent",
+    "annual_fee": 0,
+    "apr_range": "19.24% - 29.99% Variable",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/7g8h9i0j-1k2l-3m4n-5o6p-7q8r9s0t1u2v/wells-fargo-active-cash.jpg",
+    "rewards_structure": [
+      {
+        "category": "General",
+        "rate": 2,
+        "unit": "percent",
+        "description": "2% cash back on purchases"
+      }
+    ],
+    "intro_bonus": {
+      "bonus_amount": 200,
+      "spend_requirement": 1000,
+      "time_frame_months": 3,
+      "description": "Earn $200 cash rewards bonus after spending $1,000 in purchases in the first 3 months."
+    },
+    "features_and_benefits": [
+      "No annual fee",
+      "0% intro APR for 15 months on purchases and qualifying balance transfers"
+    ],
+    "best_for": [
+      "Flat Rate Cashback",
+      "No Annual Fee",
+      "Balance Transfers"
+    ]
+  },
+  {
     "id": "wells-fargo-reflect",
     "name": "Wells Fargo Reflect® Card",
     "issuer": "Wells Fargo",
@@ -160,6 +685,115 @@
       "Balance Transfers",
       "No Annual Fee",
       "Low APR"
+    ]
+  },
+  {
+    "id": "wells-fargo-autograph",
+    "name": "Wells Fargo Autograph℠ Card",
+    "issuer": "Wells Fargo",
+    "card_type": "Rewards",
+    "credit_score_range": "Good to Excellent",
+    "annual_fee": 0,
+    "apr_range": "19.24% - 29.99% Variable",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w/wells-fargo-autograph.jpg",
+    "rewards_structure": [
+      {
+        "category": "Dining",
+        "rate": 3,
+        "unit": "points",
+        "description": "3x points on restaurants"
+      },
+      {
+        "category": "Travel",
+        "rate": 3,
+        "unit": "points",
+        "description": "3x points on travel"
+      },
+      {
+        "category": "Gas",
+        "rate": 3,
+        "unit": "points",
+        "description": "3x points on gas stations"
+      },
+      {
+        "category": "Transit",
+        "rate": 3,
+        "unit": "points",
+        "description": "3x points on transit"
+      },
+      {
+        "category": "Popular Streaming Services",
+        "rate": 3,
+        "unit": "points",
+        "description": "3x points on popular streaming services"
+      },
+      {
+        "category": "Phone Plans",
+        "rate": 3,
+        "unit": "points",
+        "description": "3x points on phone plans"
+      },
+      {
+        "category": "General",
+        "rate": 1,
+        "unit": "points",
+        "description": "1x point on all other purchases"
+      }
+    ],
+    "intro_bonus": {
+      "bonus_amount": 20000,
+      "spend_requirement": 1000,
+      "time_frame_months": 3,
+      "description": "Earn 20,000 bonus points when you spend $1,000 in purchases in the first 3 months."
+    },
+    "features_and_benefits": [
+      "No annual fee",
+      "No foreign transaction fees"
+    ],
+    "best_for": [
+      "Multiple Bonus Categories",
+      "No Annual Fee",
+      "Travel"
+    ]
+  },
+  {
+    "id": "discover-it-cash-back",
+    "name": "Discover it® Cash Back",
+    "issuer": "Discover",
+    "card_type": "Cashback",
+    "credit_score_range": "Good to Excellent",
+    "annual_fee": 0,
+    "apr_range": "18.24% - 27.24% Variable",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/9i0j1k2l-3m4n-5o6p-7q8r-9s0t1u2v3w4x/discover-it-cash-back.jpg",
+    "rewards_structure": [
+      {
+        "category": "Rotating Categories",
+        "rate": 5,
+        "unit": "percent",
+        "description": "5% cash back on rotating quarterly categories (on up to $1,500 per quarter)"
+      },
+      {
+        "category": "General",
+        "rate": 1,
+        "unit": "percent",
+        "description": "1% cash back on all other purchases"
+      }
+    ],
+    "intro_bonus": {
+      "bonus_amount": null,
+      "spend_requirement": null,
+      "time_frame_months": null,
+      "description": "Discover will automatically match all the cash back you've earned at the end of your first year."
+    },
+    "features_and_benefits": [
+      "No annual fee",
+      "Cashback Match for first year",
+      "Free FICO® Credit Score"
+    ],
+    "best_for": [
+      "Rotating Categories",
+      "No Annual Fee",
+      "Cash Back"
     ]
   },
   {
@@ -198,6 +832,40 @@
     "best_for": [
       "Building Credit",
       "Secured"
+    ]
+  },
+  {
+    "id": "discover-it-miles",
+    "name": "Discover it® Miles",
+    "issuer": "Discover",
+    "card_type": "Travel",
+    "credit_score_range": "Good to Excellent",
+    "annual_fee": 0,
+    "apr_range": "18.24% - 27.24% Variable",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/0j1k2l3m-4n5o-6p7q-8r9s-0t1u2v3w4x5y/discover-it-miles.jpg",
+    "rewards_structure": [
+      {
+        "category": "General",
+        "rate": 1.5,
+        "unit": "miles",
+        "description": "1.5x miles on every purchase"
+      }
+    ],
+    "intro_bonus": {
+      "bonus_amount": null,
+      "spend_requirement": null,
+      "time_frame_months": null,
+      "description": "Discover will automatically match all the miles you've earned at the end of your first year."
+    },
+    "features_and_benefits": [
+      "No annual fee",
+      "Miles Match for first year",
+      "No foreign transaction fees"
+    ],
+    "best_for": [
+      "Travel",
+      "No Annual Fee",
+      "Simple Rewards"
     ]
   }
 ]
