@@ -1,5 +1,6 @@
 .env
 venv/
+proj_backend/
 __pycache__/
 
 # Ignore test token script
