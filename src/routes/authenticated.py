@@ -1,42 +1,57 @@
-from fastapi import APIRouter, Request, HTTPException, Depends
+from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
 from src.auth.supabase import authenticate, SupabaseUser
-from typing import List
+from typing import List, Union, Any
+from fastapi import Body
 
-# Create router with authentication middleware applied to ALL routes
-router = APIRouter(
-    prefix="/api/protected",
-    tags=["protected"],
-    dependencies=[Depends(authenticate)]  # This makes ALL routes in this router authenticated!
-)
+from src.models.db import DatabaseConfig
 
+# Request models
 class UserAnswers(BaseModel):
-    answers: List[str]
+    answers: Union[List[str], dict]
     metadata: dict = {}
 
-@router.post("/submit-answers")
-async def submit_answers(user_data: UserAnswers, auth_user: SupabaseUser = Depends(authenticate)):
-    try:
-        user_data_dict = user_data.model_dump() # FIXME: Keep an eye on this
-        user_data_dict["authenticated_user_id"] = auth_user.id
-        
-        # Your database logic here
-        return {"message": "Answers saved successfully", "user_id": auth_user.id}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to save data: {e}")
+# Controller functions
+class AuthenticatedController:
+    @staticmethod
+    async def save_answers(db_config: DatabaseConfig, user: SupabaseUser, payload: UserAnswers) -> dict:
+        users = db_config.get_users_collection()
+        update = {
+            "$set": {
+                "answers": payload.answers,
+                "answers_metadata": payload.metadata
+            }
+        }
+        result = users.update_one({"supabase_user_id": user.id}, update, upsert=True)
+        return {
+            "message": "Answers saved successfully",
+            "user_id": user.id,
+            "upserted": bool(result.upserted_id)
+        }
 
-@router.get("/recommendation/{user_id}")
-async def get_recommendation(user_id: str, auth_user: SupabaseUser = Depends(authenticate)):
-    # Ensure user can only access their own data
-    if user_id != auth_user.id:
-        raise HTTPException(status_code=403, detail="Access denied")
-    
-    return {"recommendation": "Your personalized recommendation", "user_id": auth_user.id}
 
-@router.get("/profile")
-async def get_profile(auth_user: SupabaseUser = Depends(authenticate)):
-    return {
-        "user_id": auth_user.id,
-        "email": auth_user.email,
-        "profile": "User profile data"
-    }
+def create_authenticated_router(db_config: DatabaseConfig) -> APIRouter:
+    router = APIRouter(
+        prefix="/api/protected",
+        tags=["protected"],
+        dependencies=[Depends(authenticate)]
+    )
+
+    # JSON body submission
+    @router.post("/submit-answers")
+    async def submit_answers(
+        payload: UserAnswers = Body(...),
+        auth_user: SupabaseUser = Depends(authenticate),
+    ):
+        return await AuthenticatedController.save_answers(db_config, auth_user, payload)
+
+    # profile sample
+    @router.get("/profile")
+    async def get_profile(auth_user: SupabaseUser = Depends(authenticate)):
+        return {
+            "user_id": auth_user.id,
+            "email": auth_user.email,
+            "profile": "User profile data"
+        }
+
+    return router

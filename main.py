@@ -10,7 +10,7 @@ from src.models.db import DatabaseConfig
 from src.util.gemini import GeminiClient
 import google.generativeai as genai
 from src.routes.public import create_public_router
-from src.routes.authenticated import router as authenticated_router
+from src.routes.authenticated import create_authenticated_router
 
 load_dotenv()
 
@@ -37,7 +37,8 @@ public_router = create_public_router(db_config)
 app.include_router(public_router)
 
 # api/protected
-app.include_router(authenticated_router)
+protected_router = create_authenticated_router(db_config)
+app.include_router(protected_router)
 
 
 
