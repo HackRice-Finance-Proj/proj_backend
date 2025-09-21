@@ -57,14 +57,25 @@ class UserAnswers(BaseModel):
     user_id: str
     answers: dict
 
+# --- Pydantic Model for Saved Card ---
+class SavedCard(BaseModel):
+    name: str
+    photo_url: str
+    description: str
+    acquisition_steps: str
+
 # --- Existing API Endpoints ---
 @app.post("/submit-answers")
 async def submit_answers(user_data: UserAnswers):
     """
-    Receives and stores user answers in MongoDB.
+    Receives and stores user answers in MongoDB, or updates existing ones.
     """
     try:
-        users.insert_one(user_data.dict())
+        users.update_one(
+            {"user_id": user_data.user_id},
+            {"$set": {"answers": user_data.answers}},
+            upsert=True
+        )
         return {"message": "Answers saved successfully"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to save data: {e}")
@@ -86,7 +97,7 @@ async def get_recommendation(user_id: str):
     - "name": The name of the credit card.
     - "photo_url": The URL for the credit card's photo.
     - "description": A detailed, 2-3 sentence explanation of why this card is the best recommendation for the user, referencing their answers.
-    - "acquisition_steps": A clear, numbered list of steps for how the user can apply for and acquire the credit card.
+    - "acquisition_steps": A clear, numbered list of steps for how the user can apply for and acquire the credit card. **Format this as a single string.**
 
     Ensure the response is a valid JSON object.
     """
@@ -108,7 +119,59 @@ async def get_recommendation(user_id: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Gemini API call failed: {e}")
 
-# --- NEW Auth0 Endpoints ---
+@app.post("/api/onboard-user")
+async def onboard_user(auth_user: Auth0User = Depends(auth.get_user)):
+    """
+    Creates a new user document in MongoDB on the first login.
+    """
+    user_id = auth_user.id
+    email = auth_user.email
+    
+    # Check if the user document already exists
+    existing_user = users.find_one({"user_id": user_id})
+
+    if existing_user:
+        return {"message": "User already exists."}
+    
+    # Create a new document for the user
+    new_user_data = {
+        "user_id": user_id,
+        "email": email,
+        "answers": {},
+        "gemini_recommendations": [],
+        "saved_cards": []
+    }
+    
+    try:
+        users.insert_one(new_user_data)
+        return {"message": "User onboarded successfully!"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to onboard user: {e}")
+
+# --- Endpoint to save a card ---
+@app.post("/api/save-card")
+async def save_card(card_info: SavedCard, auth_user: Auth0User = Depends(auth.get_user)):
+    """
+    Adds a selected credit card (from the Gemini response) to the user's saved_cards list in MongoDB.
+    """
+    user_id = auth_user.id
+
+    try:
+        # Check if the user document exists
+        result = users.update_one(
+            {"user_id": user_id},
+            {"$addToSet": {"saved_cards": card_info.dict()}}
+        )
+        if result.matched_count == 0:
+            raise HTTPException(status_code=404, detail="User not found. Please onboard the user first.")
+
+        return {"message": "Card added to saved list successfully."}
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to save card: {e}")
+
+# --- Auth0 Endpoints ---
 @app.get("/api/public")
 async def public_endpoint():
     """
