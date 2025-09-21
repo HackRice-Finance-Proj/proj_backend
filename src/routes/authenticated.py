@@ -3,7 +3,7 @@ import json
 from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
 from src.auth.supabase import authenticate, SupabaseUser
-from typing import List, Union
+from typing import List, Union, Optional
 from fastapi import Body
 
 from src.models.db import DatabaseConfig
@@ -13,6 +13,10 @@ from src.util.gemini import GeminiClient
 class UserAnswers(BaseModel):
     answers: Union[List[str], dict]
     metadata: dict = {}
+
+class SaveCardRequest(BaseModel):
+    card_id: Optional[str] = None
+    name: Optional[str] = None
 
 # Controller functions
 class AuthenticatedController:
@@ -127,5 +131,133 @@ def create_authenticated_router(db_config: DatabaseConfig, gemini: GeminiClient)
             "email": auth_user.email,
             "profile": "User profile data"
         }
+
+    @router.get("/saved-cards")
+    async def get_saved_cards(
+        card_id: Optional[str] = None,
+        include_plans: bool = False,
+        auth_user: SupabaseUser = Depends(authenticate),
+    ):
+        users = db_config.get_users_collection()
+        user_doc = users.find_one(
+            {"supabase_user_id": auth_user.id},
+            {"saved_cards": 1, "saved_card_plans": 1, "_id": 0},
+        ) or {}
+
+        saved_cards = user_doc.get("saved_cards", []) or []
+
+        if card_id:
+            saved_cards = [c for c in saved_cards if c.get("id") == card_id]
+
+        if include_plans:
+            plans = user_doc.get("saved_card_plans", {}) or {}
+            # Attach plan if available, non-destructively
+            enriched = []
+            for c in saved_cards:
+                cid = c.get("id")
+                enriched.append({**c, "plan": plans.get(cid)})
+            return {"saved_cards": enriched}
+
+        return {"saved_cards": saved_cards}
+
+    @router.post("/save-card")
+    async def save_card(
+        payload: SaveCardRequest = Body(...),
+        auth_user: SupabaseUser = Depends(authenticate),
+    ):
+        users = db_config.get_users_collection()
+        # 1) Lookup selected card
+        cards = load_cards()
+        card: Optional[dict] = None
+        if payload.card_id:
+            card = next((c for c in cards if c.get("id") == payload.card_id), None)
+        if not card and payload.name:
+            lname = payload.name.strip().lower()
+            card = next((c for c in cards if str(c.get("name", "")).strip().lower() == lname), None)
+        if not card:
+            raise HTTPException(status_code=404, detail="Selected card not found (provide valid card_id or name)")
+
+        # 2) Save minimal card snapshot to user's saved_cards (no duplicates)
+        saved_snapshot = {
+            "id": card.get("id"),
+            "name": card.get("name"),
+            "issuer": card.get("issuer"),
+            "card_type": card.get("card_type"),
+            "annual_fee": card.get("annual_fee"),
+            "apr_range": card.get("apr_range"),
+            "image_url": card.get("image_url"),
+        }
+        users.update_one(
+            {"supabase_user_id": auth_user.id},
+            {"$addToSet": {"saved_cards": saved_snapshot}},
+            upsert=True,
+        )
+
+        # 3) Build a tailored guidance plan via Gemini using user's answers
+        user_doc = users.find_one({"supabase_user_id": auth_user.id}) or {}
+        answers = user_doc.get("answers", {})
+
+        prompt = (
+            "You are a credit card guidance assistant.\n"
+            "Given the user's answers and the selected credit card details, return a single JSON object with: \n"
+            "- name: string (card name)\n"
+            "- issuer: string\n"
+            "- category: string (use card_type)\n"
+            "- annualFee: number (use annual_fee)\n"
+            "- rewardRate: string (succinct summary from rewards_structure, e.g. '4% dining; 1% other')\n"
+            "- keyFeatures: array of exactly 5 short bullet strings (10-20 words each)\n"
+            "- spendingTip: one-sentence tip tailored to user answers\n"
+            "- upgradePathTip: one-sentence tip about potential upgrade options\n"
+            "- monthlyOptimizationTip: one-sentence tip to optimize monthly use\n"
+            "- extraTips: array of exactly 3 short, specific tips (10-20 words)\n\n"
+            "User Answers JSON: \n" + json.dumps(answers) + "\n\n"
+            "Selected Card JSON: \n" + json.dumps(card) + "\n\n"
+            "Only return JSON, no explanation or prose."
+        )
+
+        try:
+            model = gemini.get_model()
+            response = await model.generate_content_async(
+                prompt,
+                generation_config={"response_mime_type": "application/json"}
+            )
+            text = response.text.strip()
+            plan = json.loads(text)
+
+            # Validate shape
+            required_keys = [
+                "name", "issuer", "category", "annualFee", "rewardRate",
+                "keyFeatures", "spendingTip", "upgradePathTip", "monthlyOptimizationTip", "extraTips"
+            ]
+            for k in required_keys:
+                if k not in plan:
+                    raise ValueError(f"Missing key: {k}")
+            if not isinstance(plan.get("keyFeatures"), list) or len(plan["keyFeatures"]) != 5:
+                raise ValueError("keyFeatures must have exactly 5 items")
+            if not isinstance(plan.get("extraTips"), list) or len(plan["extraTips"]) != 3:
+                raise ValueError("extraTips must have exactly 3 items")
+
+            # 4) Persist plan under its own object keyed by card id
+            try:
+                card_id = card.get("id") or saved_snapshot.get("id")
+                if card_id:
+                    users.update_one(
+                        {"supabase_user_id": auth_user.id},
+                        {"$set": {f"saved_card_plans.{card_id}": plan}},
+                        upsert=True,
+                    )
+            except Exception:
+                # Non-fatal: still return the plan even if persistence fails
+                pass
+
+            return {
+                "message": "Card saved and guidance generated",
+                "saved_card": saved_snapshot,
+                "plan": plan,
+            }
+        except HTTPException:
+            raise
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"Failed to generate plan: {e}")
 
     return router
