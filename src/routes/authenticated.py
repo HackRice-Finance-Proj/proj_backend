@@ -18,6 +18,9 @@ class SaveCardRequest(BaseModel):
     card_id: Optional[str] = None
     name: Optional[str] = None
 
+class ChatRequest(BaseModel):
+    message: str
+
 # Controller functions
 class AuthenticatedController:
     @staticmethod
@@ -141,24 +144,54 @@ def create_authenticated_router(db_config: DatabaseConfig, gemini: GeminiClient)
         users = db_config.get_users_collection()
         user_doc = users.find_one(
             {"supabase_user_id": auth_user.id},
-            {"saved_cards": 1, "saved_card_plans": 1, "_id": 0},
+            {"saved_card_plans": 1, "_id": 0},
         ) or {}
 
-        saved_cards = user_doc.get("saved_cards", []) or []
+        saved_card_plans = user_doc.get("saved_card_plans", {}) or {}
 
-        if card_id:
-            saved_cards = [c for c in saved_cards if c.get("id") == card_id]
+        # Optionally filter by card_id
+        items = (
+            {card_id_key: value} for card_id_key, value in saved_card_plans.items()
+            if (not card_id or card_id_key == card_id)
+        )
 
-        if include_plans:
-            plans = user_doc.get("saved_card_plans", {}) or {}
-            # Attach plan if available, non-destructively
-            enriched = []
-            for c in saved_cards:
-                cid = c.get("id")
-                enriched.append({**c, "plan": plans.get(cid)})
-            return {"saved_cards": enriched}
+        # Build response using only saved_card_plans as source of truth.
+        cards_out = []
+        # Access to cards catalog for legacy entries that might not include 'card'
+        cards_catalog = None
+        for item in items:
+            # item is a dict like {"<cid>": value}
+            [(cid, value)] = item.items()
+            if isinstance(value, dict) and "card" in value:
+                card_snapshot = value.get("card") or {}
+                plan_obj = value.get("plan") if include_plans else None
+                out = dict(card_snapshot)
+                if include_plans:
+                    out["plan"] = plan_obj
+                cards_out.append(out)
+            else:
+                # Legacy: value might be just the plan. Try to reconstruct snapshot from catalog.
+                if cards_catalog is None:
+                    try:
+                        cards_catalog = load_cards()
+                    except Exception:
+                        cards_catalog = []
+                snap = next((c for c in (cards_catalog or []) if c.get("id") == cid), None) or {"id": cid}
+                snap_min = {
+                    "id": snap.get("id"),
+                    "name": snap.get("name"),
+                    "issuer": snap.get("issuer"),
+                    "card_type": snap.get("card_type"),
+                    "annual_fee": snap.get("annual_fee"),
+                    "apr_range": snap.get("apr_range"),
+                    "image_url": snap.get("image_url"),
+                }
+                out = dict(snap_min)
+                if include_plans:
+                    out["plan"] = value
+                cards_out.append(out)
 
-        return {"saved_cards": saved_cards}
+        return {"saved_cards": cards_out}
 
     @router.post("/save-card")
     async def save_card(
@@ -187,11 +220,7 @@ def create_authenticated_router(db_config: DatabaseConfig, gemini: GeminiClient)
             "apr_range": card.get("apr_range"),
             "image_url": card.get("image_url"),
         }
-        users.update_one(
-            {"supabase_user_id": auth_user.id},
-            {"$addToSet": {"saved_cards": saved_snapshot}},
-            upsert=True,
-        )
+        # No longer store a separate saved_cards array; plans object will hold card info
 
         # 3) Build a tailored guidance plan via Gemini using user's answers
         user_doc = users.find_one({"supabase_user_id": auth_user.id}) or {}
@@ -237,13 +266,13 @@ def create_authenticated_router(db_config: DatabaseConfig, gemini: GeminiClient)
             if not isinstance(plan.get("extraTips"), list) or len(plan["extraTips"]) != 3:
                 raise ValueError("extraTips must have exactly 3 items")
 
-            # 4) Persist plan under its own object keyed by card id
+            # 4) Persist under a single source of truth keyed by card id
             try:
                 card_id = card.get("id") or saved_snapshot.get("id")
                 if card_id:
                     users.update_one(
                         {"supabase_user_id": auth_user.id},
-                        {"$set": {f"saved_card_plans.{card_id}": plan}},
+                        {"$set": {f"saved_card_plans.{card_id}": {"card": saved_snapshot, "plan": plan}}},
                         upsert=True,
                     )
             except Exception:
@@ -259,5 +288,55 @@ def create_authenticated_router(db_config: DatabaseConfig, gemini: GeminiClient)
             raise
         except Exception as e:
             raise HTTPException(status_code=500, detail=f"Failed to generate plan: {e}")
+
+    @router.post("/chat")
+    async def chat(
+        payload: ChatRequest = Body(...),
+        auth_user: SupabaseUser = Depends(authenticate),
+    ):
+        users = db_config.get_users_collection()
+        user_doc = users.find_one({"supabase_user_id": auth_user.id}) or {}
+
+        profile = {
+            "email": user_doc.get("email"),
+            "firstName": user_doc.get("firstName"),
+            "lastName": user_doc.get("lastName"),
+        }
+        answers = user_doc.get("answers", {}) or {}
+        previous_recs = user_doc.get("gemini_recommendations", []) or []
+        saved_card_plans = user_doc.get("saved_card_plans", {}) or {}
+
+        # For completeness, include the catalog for any card-specific facts
+        try:
+            cards_catalog = load_cards()
+        except Exception:
+            cards_catalog = []
+
+        prompt = (
+            "You are a friendly, practical credit card advisor.\n"
+            "Use ONLY the provided user context and the card catalog.\n"
+            "Be specific, avoid generic fluff. If some detail is unknown, say so briefly.\n"
+            "Prefer recommending from saved cards and prior recommendations when relevant.\n"
+            "When listing tips, use concise bullets.\n\n"
+            "User Profile JSON:\n" + json.dumps(profile) + "\n\n"
+            "User Answers JSON:\n" + json.dumps(answers) + "\n\n"
+            "Saved Card Plans JSON (per card_id => {card, plan}):\n" + json.dumps(saved_card_plans) + "\n\n"
+            "Previous Recommendations JSON (array):\n" + json.dumps(previous_recs) + "\n\n"
+            "Available Credit Cards Catalog JSON:\n" + json.dumps(cards_catalog) + "\n\n"
+            "User Message:\n" + payload.message + "\n\n"
+            "Now provide your best, tailored advice in plain text."
+        )
+
+        try:
+            model = gemini.get_model()
+            response = await model.generate_content_async(prompt)
+            reply = (response.text or "").strip()
+            if not reply:
+                raise ValueError("Empty response from model")
+            return {"reply": reply}
+        except HTTPException:
+            raise
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"Failed to generate advice: {e}")
 
     return router
