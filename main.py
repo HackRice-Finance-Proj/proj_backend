@@ -1,14 +1,9 @@
-import os
-import json
 from dotenv import load_dotenv
 
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-from pymongo import MongoClient
 from src.models.db import DatabaseConfig
 from src.util.gemini import GeminiClient
-import google.generativeai as genai
 from src.routes.public import create_public_router
 from src.routes.authenticated import create_authenticated_router
 
@@ -37,7 +32,7 @@ public_router = create_public_router(db_config)
 app.include_router(public_router)
 
 # api/protected
-protected_router = create_authenticated_router(db_config)
+protected_router = create_authenticated_router(db_config, gemini_client)
 app.include_router(protected_router)
 
 
