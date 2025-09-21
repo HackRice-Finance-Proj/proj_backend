@@ -1,13 +1,14 @@
-from fastapi import FastAPI, HTTPException, Depends # type: ignore
-from pydantic import BaseModel # type: ignore
-from pymongo import MongoClient # type: ignore
-from dotenv import load_dotenv # type: ignore
-import google.generativeai as genai # type: ignore
-import json
 import os
+import json
+from dotenv import load_dotenv
+
+from fastapi import FastAPI, HTTPException, Depends
+from pydantic import BaseModel
+from pymongo import MongoClient
+import google.generativeai as genai
 
 # --- Auth0 Libraries & Configuration ---
-from fastapi_auth0 import Auth0, Auth0User #type: ignore
+from fastapi_auth0 import Auth0, Auth0User
 
 load_dotenv()
 
@@ -21,8 +22,8 @@ auth = Auth0(
     domain=AUTH0_DOMAIN,
     api_audience=AUTH0_API_AUDIENCE,
     scopes={
-        "openid": "OpenID Connect", 
-        "profile": "User profile information", 
+        "openid": "OpenID Connect",  
+        "profile": "User profile information",  
         "email": "User email address"
     }
 )
@@ -53,41 +54,38 @@ except FileNotFoundError:
     raise HTTPException(status_code=500, detail="credit_cards.json file not found.")
 
 # --- Pydantic Models for Data Validation ---
-class UserAnswers(BaseModel):
-    user_id: str
-    answers: dict
-
-# --- Pydantic Model for Saved Card ---
 class SavedCard(BaseModel):
     name: str
     photo_url: str
     description: str
     acquisition_steps: str
 
-# --- Existing API Endpoints ---
-@app.post("/submit-answers")
-async def submit_answers(user_data: UserAnswers):
+# --- API Endpoints ---
+@app.post("/api/submit-answers")
+async def submit_answers(answers: dict, auth_user: Auth0User = Depends(auth.get_user)):
     """
     Receives and stores user answers in MongoDB, or updates existing ones.
     """
+    user_id = auth_user.id
     try:
         users.update_one(
-            {"user_id": user_data.user_id},
-            {"$set": {"answers": user_data.answers}},
+            {"user_id": user_id},
+            {"$set": {"answers": answers}},
             upsert=True
         )
         return {"message": "Answers saved successfully"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to save data: {e}")
 
-@app.get("/recommendation/{user_id}")
-async def get_recommendation(user_id: str):
+@app.get("/api/recommendations/generate")
+async def get_recommendation(auth_user: Auth0User = Depends(auth.get_user)):
     """
     Retrieves user answers, gets a Gemini recommendation, and returns the result.
     """
+    user_id = auth_user.id
     user_doc = users.find_one({"user_id": user_id})
-    if not user_doc:
-        raise HTTPException(status_code=404, detail="User not found.")
+    if not user_doc or "answers" not in user_doc:
+        raise HTTPException(status_code=404, detail="User answers not found.")
 
     prompt_content = f"""
     The user's answers are: {json.dumps(user_doc['answers'])}
@@ -148,7 +146,7 @@ async def onboard_user(auth_user: Auth0User = Depends(auth.get_user)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to onboard user: {e}")
 
-# --- Endpoint to save a card ---
+# --- Save Card ---
 @app.post("/api/save-card")
 async def save_card(card_info: SavedCard, auth_user: Auth0User = Depends(auth.get_user)):
     """
@@ -164,12 +162,40 @@ async def save_card(card_info: SavedCard, auth_user: Auth0User = Depends(auth.ge
         )
         if result.matched_count == 0:
             raise HTTPException(status_code=404, detail="User not found. Please onboard the user first.")
-
+        
         return {"message": "Card added to saved list successfully."}
     except HTTPException as e:
         raise e
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to save card: {e}")
+
+# --- Retrieve Saved Cards ---
+@app.get("/api/saved-cards")
+async def get_saved_cards(auth_user: Auth0User = Depends(auth.get_user)):
+    """
+    Retrieves the list of saved credit cards for the authenticated user.
+    """
+    user_id = auth_user.id
+    user_doc = users.find_one({"user_id": user_id})
+
+    if not user_doc:
+        raise HTTPException(status_code=404, detail="User not found.")
+
+    return user_doc.get("saved_cards", [])
+
+# --- Retrieve Gemini Recommendations ---
+@app.get("/api/recommendations")
+async def get_recommendations(auth_user: Auth0User = Depends(auth.get_user)):
+    """
+    Retrieves the Gemini recommendations for the authenticated user.
+    """
+    user_id = auth_user.id
+    user_doc = users.find_one({"user_id": user_id})
+
+    if not user_doc:
+        raise HTTPException(status_code=404, detail="User not found.")
+
+    return user_doc.get("gemini_recommendations", [])
 
 # --- Auth0 Endpoints ---
 @app.get("/api/public")
