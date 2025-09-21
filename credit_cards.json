@@ -40,7 +40,7 @@
     "credit_score_range": "Good to Excellent",
     "annual_fee": 95,
     "apr_range": "19.99% - 29.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/58e4cc7c-f559-11eb-b50e-577c1a5e54c3/8b8e8fdeef1a2d95e58f169d11e4c8b3a7fe6c2b5e36f3dc9f31c6e9e1b5a2f4.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/1fc99a80-1508-4e14-83d7-eb5d5da65d97/1c02e12156eb0f625fadd3dc2c5319b30e24fdbaa35977525aa595a477520cbd.jpg",
     "rewards_structure": [
       {
         "category": "General",
@@ -62,45 +62,6 @@
     "best_for": [
       "Travel",
       "Flat Rate Rewards"
-    ]
-  },
-  {
-    "id": "capital-one-savor-one",
-    "name": "Capital One SavorOne Cash Rewards Credit Card",
-    "issuer": "Capital One",
-    "card_type": "Cashback",
-    "credit_score_range": "Good to Excellent",
-    "annual_fee": 0,
-    "apr_range": "19.99% - 29.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/82e4d6de-f559-11eb-b50e-577c1a5e54c3/1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1e2f3g4.jpg",
-    "rewards_structure": [
-      {
-        "category": "Dining",
-        "rate": 3,
-        "unit": "percent",
-        "description": "3% cash back on dining, entertainment, popular streaming services and grocery stores"
-      },
-      {
-        "category": "General",
-        "rate": 1,
-        "unit": "percent",
-        "description": "1% cash back on all other purchases"
-      }
-    ],
-    "intro_bonus": {
-      "bonus_amount": 200,
-      "spend_requirement": 500,
-      "time_frame_months": 3,
-      "description": "Earn $200 cash back after you spend $500 on purchases in the first 3 months."
-    },
-    "features_and_benefits": [
-      "No annual fee",
-      "No foreign transaction fees"
-    ],
-    "best_for": [
-      "Dining",
-      "Entertainment",
-      "No Annual Fee"
     ]
   },
   {
@@ -144,7 +105,7 @@
     "credit_score_range": "Excellent",
     "annual_fee": 395,
     "apr_range": "19.99% - 29.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/venture-x-card.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/39cdfd80-3372-11ec-ba1e-0bd72314c41b/212d04e17da168e0519eff57f944fede1f66f4cb08bc9643a04cb8c48f0e5a25.jpg",
     "rewards_structure": [
       {
         "category": "Hotels and Rental Cars",
@@ -184,7 +145,7 @@
     "credit_score_range": "Good to Excellent",
     "annual_fee": 95,
     "apr_range": "19.99% - 29.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/savor-card.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/735a53f0-f560-11eb-b723-0354a7fe7505/8fdf3bb34ca47c210708718d29c45beb7227f08e5f85582580b3e1b55fd4ce87.jpg",
     "rewards_structure": [
       {
         "category": "Dining",
@@ -235,7 +196,7 @@
     "credit_score_range": "Average to Fair",
     "annual_fee": 39,
     "apr_range": "26.99% - 29.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/quicksilver-one-card.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/8aa2a824-b787-4d43-b8ec-60ce96dd2648/338be668a31b0a92e657ca7b1e987df53f00e689d6d3e4f817925e2815a5f35f.jpg",
     "rewards_structure": [
       {
         "category": "General",
@@ -268,7 +229,7 @@
     "credit_score_range": "Fair to Good",
     "annual_fee": 0,
     "apr_range": "26.99% - 29.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/platinum-card.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/36c93369-df56-4b40-a234-a49ebd5f5f77/b8138359dbe5544a867948ec2943da9582b287e2d5032d48b6e1b3d9d5d67536.jpg",
     "rewards_structure": [],
     "intro_bonus": {
       "bonus_amount": null,
@@ -287,41 +248,14 @@
     ]
   },
   {
-    "id": "capital-one-secured",
-    "name": "Capital One Secured Mastercard",
-    "issuer": "Capital One",
-    "card_type": "Secured",
-    "credit_score_range": "Poor to Fair",
-    "annual_fee": 0,
-    "apr_range": "26.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/secured-mastercard.jpg",
-    "rewards_structure": [],
-    "intro_bonus": {
-      "bonus_amount": null,
-      "spend_requirement": null,
-      "time_frame_months": null,
-      "description": "No sign-up bonus. Focus is on building credit."
-    },
-    "features_and_benefits": [
-      "No annual fee",
-      "Secured card that reports to all 3 credit bureaus",
-      "Possible upgrade to unsecured card"
-    ],
-    "best_for": [
-      "Building Credit",
-      "Poor Credit",
-      "Secured Cards"
-    ]
-  },
-  {
     "id": "bank-of-america-travel-rewards",
-    "name": "Bank of America® Travel Rewards Credit Card",
+    "name": "Bank of America Travel Rewards Credit Card",
     "issuer": "Bank of America",
     "card_type": "Travel",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "18.99% - 28.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/c0f5d2e8-3a1b-4c5d-9e2f-8b7a6c3d0e9f/bank-of-america-travel-rewards.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/85d56191-a06e-4b59-8872-0f4e071a8d68/c9cc380dcb02709554b09d6c37760e6330492455e1651a40e8beacee44da36ab.jpg",
     "rewards_structure": [
       {
         "category": "General",
@@ -348,139 +282,14 @@
     ]
   },
   {
-    "id": "bank-of-america-cash-rewards",
-    "name": "Bank of America® Cash Rewards Credit Card",
-    "issuer": "Bank of America",
-    "card_type": "Cashback",
-    "credit_score_range": "Good to Excellent",
-    "annual_fee": 0,
-    "apr_range": "18.99% - 28.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/a1b2c3d4-5e6f-7g8h-9i0j-1k2l3m4n5o6p/bank-of-america-cash-rewards.jpg",
-    "rewards_structure": [
-      {
-        "category": "Choice Category",
-        "rate": 3,
-        "unit": "percent",
-        "description": "3% cash back in the category of your choice: gas, online shopping, dining, travel, drug stores, or home improvement/furnishings"
-      },
-      {
-        "category": "Grocery",
-        "rate": 2,
-        "unit": "percent",
-        "description": "2% cash back at grocery stores and wholesale clubs"
-      },
-      {
-        "category": "General",
-        "rate": 1,
-        "unit": "percent",
-        "description": "1% cash back on all other purchases"
-      }
-    ],
-    "intro_bonus": {
-      "bonus_amount": 200,
-      "spend_requirement": 1000,
-      "time_frame_months": 3,
-      "description": "$200 online cash rewards bonus after you make at least $1,000 in purchases in the first 90 days."
-    },
-    "features_and_benefits": [
-      "No annual fee",
-      "Choose your 3% cash back category"
-    ],
-    "best_for": [
-      "Cashback",
-      "Customizable Rewards",
-      "No Annual Fee"
-    ]
-  },
-  {
-    "id": "bank-of-america-premium-rewards",
-    "name": "Bank of America® Premium Rewards® Credit Card",
-    "issuer": "Bank of America",
-    "card_type": "Travel",
-    "credit_score_range": "Good to Excellent",
-    "annual_fee": 95,
-    "apr_range": "18.99% - 28.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/boa-premium-rewards.jpg",
-    "rewards_structure": [
-      {
-        "category": "Travel and Dining",
-        "rate": 2,
-        "unit": "points",
-        "description": "2 points per $1 spent on travel and dining purchases"
-      },
-      {
-        "category": "General",
-        "rate": 1.5,
-        "unit": "points",
-        "description": "1.5 points per $1 spent on all other purchases"
-      }
-    ],
-    "intro_bonus": {
-      "bonus_amount": 50000,
-      "spend_requirement": 3000,
-      "time_frame_months": 3,
-      "description": "Earn 50,000 online bonus points after you make at least $3,000 in purchases in the first 90 days."
-    },
-    "features_and_benefits": [
-      "$100 annual airline incidental credit",
-      "No foreign transaction fees",
-      "Up to $100 TSA PreCheck/Global Entry statement credit"
-    ],
-    "best_for": [
-      "Travel",
-      "Dining",
-      "Premium Benefits"
-    ]
-  },
-  {
-    "id": "bank-of-america-premium-rewards-elite",
-    "name": "Bank of America® Premium Rewards® Elite Credit Card",
-    "issuer": "Bank of America",
-    "card_type": "Premium Travel",
-    "credit_score_range": "Excellent",
-    "annual_fee": 550,
-    "apr_range": "18.99% - 28.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/boa-premium-rewards-elite.jpg",
-    "rewards_structure": [
-      {
-        "category": "Travel and Dining",
-        "rate": 3,
-        "unit": "points",
-        "description": "3 points per $1 spent on travel and dining purchases"
-      },
-      {
-        "category": "General",
-        "rate": 2,
-        "unit": "points",
-        "description": "2 points per $1 spent on all other purchases"
-      }
-    ],
-    "intro_bonus": {
-      "bonus_amount": 100000,
-      "spend_requirement": 10000,
-      "time_frame_months": 3,
-      "description": "Earn 100,000 online bonus points after you make at least $10,000 in purchases in the first 90 days."
-    },
-    "features_and_benefits": [
-      "$200 annual airline incidental credit",
-      "Priority Pass Select membership",
-      "Up to $100 TSA PreCheck/Global Entry statement credit"
-    ],
-    "best_for": [
-      "Premium Travel",
-      "High Spenders",
-      "Lounge Access"
-    ]
-  },
-  {
     "id": "bank-of-america-unlimited-cash-rewards",
-    "name": "Bank of America® Unlimited Cash Rewards Credit Card",
+    "name": "Bank of America Unlimited Cash Rewards Credit Card",
     "issuer": "Bank of America",
     "card_type": "Cashback",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "18.99% - 28.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/boa-unlimited-cash-rewards.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/0aff5c90-e685-11eb-bc64-2bf2a495f6d2/e2453daaba8736db74fe00c79cfb8a5ae93c18003bc06ada6d5c9c83ba49f4a5.jpg",
     "rewards_structure": [
       {
         "category": "General",
@@ -507,13 +316,13 @@
   },
   {
     "id": "bank-of-america-customized-cash-rewards-secured",
-    "name": "Bank of America® Customized Cash Rewards Secured Credit Card",
+    "name": "Bank of America Customized Cash Rewards Secured Credit Card",
     "issuer": "Bank of America",
     "card_type": "Secured",
     "credit_score_range": "Poor to Fair",
     "annual_fee": 0,
     "apr_range": "27.74% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/boa-customized-cash-rewards-secured.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/7654cc25-4d96-4f85-8bdc-1db627e708c1/60a020f0c6a5e5fb43e936dea6f2ac249716f4df87eaf14429780a00f6253398.jpg",
     "rewards_structure": [
       {
         "category": "Choice Category",
@@ -553,13 +362,13 @@
   },
   {
     "id": "bank-of-america-platinum-plus",
-    "name": "Bank of America® Platinum Plus® Mastercard®",
+    "name": "Bank of America Platinum Plus Mastercard",
     "issuer": "Bank of America",
     "card_type": "Low APR",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "14.24% - 24.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/boa-platinum-plus.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/3472dbcc-d53c-4597-91d8-505c829f3eb6/585c10b31dee8e261a6ae9b0471beb30c46a0c5f52a0e2ef9eb2e5ee031d4d2b.jpg",
     "rewards_structure": [],
     "intro_bonus": {
       "bonus_amount": null,
@@ -579,48 +388,8 @@
     ]
   },
   {
-    "id": "bank-of-america-alaska-airlines",
-    "name": "Bank of America® Alaska Airlines Visa® Credit Card",
-    "issuer": "Bank of America",
-    "card_type": "Airline",
-    "credit_score_range": "Good to Excellent",
-    "annual_fee": 75,
-    "apr_range": "18.99% - 28.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/boa-alaska-airlines.jpg",
-    "rewards_structure": [
-      {
-        "category": "Alaska Airlines",
-        "rate": 3,
-        "unit": "miles",
-        "description": "3 miles per $1 spent on Alaska Airlines purchases"
-      },
-      {
-        "category": "General",
-        "rate": 1,
-        "unit": "miles",
-        "description": "1 mile per $1 spent on all other purchases"
-      }
-    ],
-    "intro_bonus": {
-      "bonus_amount": 40000,
-      "spend_requirement": 2000,
-      "time_frame_months": 3,
-      "description": "Earn 40,000 bonus miles and Alaska's Famous Companion Fare™ after you make at least $2,000 in purchases in the first 90 days."
-    },
-    "features_and_benefits": [
-      "Alaska Airlines Companion Fare annually",
-      "Free first checked bag on Alaska Airlines",
-      "No foreign transaction fees"
-    ],
-    "best_for": [
-      "Alaska Airlines Travelers",
-      "Companion Fare",
-      "Free Checked Bags"
-    ]
-  },
-  {
     "id": "chase-sapphire-preferred",
-    "name": "Chase Sapphire Preferred® Card",
+    "name": "Chase Sapphire Preferred Card",
     "issuer": "Chase",
     "card_type": "Travel",
     "credit_score_range": "Good to Excellent",
@@ -678,13 +447,13 @@
   },
   {
     "id": "chase-sapphire-reserve",
-    "name": "Chase Sapphire Reserve®",
+    "name": "Chase Sapphire Reserve",
     "issuer": "Chase",
     "card_type": "Premium Travel",
     "credit_score_range": "Excellent",
     "annual_fee": 550,
     "apr_range": "22.49% - 29.49% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/d1e2f3g4-5h6i-7j8k-9l0m-1n2o3p4q5r6s/chase-sapphire-reserve.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/d89e10ed-e781-4d28-ae74-205056a10244/5df1be45283a52f362a78554a755a61fd2e3d460293822e19a196af38a256794.jpg",
     "rewards_structure": [
       {
         "category": "Travel",
@@ -730,13 +499,13 @@
   },
   {
     "id": "chase-freedom-unlimited",
-    "name": "Chase Freedom Unlimited®",
+    "name": "Chase Freedom Unlimited",
     "issuer": "Chase",
     "card_type": "Cashback",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "20.49% - 29.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/2a3b4c5d-6e7f-8g9h-0i1j-2k3l4m5n6o7p/chase-freedom-unlimited.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/84e1494c-bae2-4b0d-ac8d-e8c095ceb2fe/3a0cac78e497688cdc58fb030fd6c59eea6a6275256e6a523d7999e1827ffd06.jpg",
     "rewards_structure": [
       {
         "category": "Dining",
@@ -775,13 +544,13 @@
   },
   {
     "id": "chase-freedom-flex",
-    "name": "Chase Freedom Flex℠",
+    "name": "Chase Freedom Flex",
     "issuer": "Chase",
     "card_type": "Cashback",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "20.49% - 29.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/chase-freedom-flex.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/33ee088c-f6bb-11ea-8bc1-3f958c527fba/9dacf16bb533669a8781f403e54dc3a5a68405fc1bfce38fda34f3bd4d5c67ec.jpg",
     "rewards_structure": [
       {
         "category": "Rotating Categories",
@@ -819,60 +588,14 @@
     ]
   },
   {
-    "id": "chase-slate-edge",
-    "name": "Chase Slate Edge℠",
-    "issuer": "Chase",
-    "card_type": "Balance Transfer",
-    "credit_score_range": "Good to Excellent",
-    "annual_fee": 0,
-    "apr_range": "17.24% - 25.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/chase-slate-edge.jpg",
-    "rewards_structure": [
-      {
-        "category": "Dining",
-        "rate": 2,
-        "unit": "percent",
-        "description": "2% cash back on dining"
-      },
-      {
-        "category": "Gas",
-        "rate": 2,
-        "unit": "percent",
-        "description": "2% cash back on gas"
-      },
-      {
-        "category": "General",
-        "rate": 1,
-        "unit": "percent",
-        "description": "1% cash back on all other purchases"
-      }
-    ],
-    "intro_bonus": {
-      "bonus_amount": null,
-      "spend_requirement": null,
-      "time_frame_months": null,
-      "description": "No sign-up bonus, but offers 0% intro APR for balance transfers."
-    },
-    "features_and_benefits": [
-      "No annual fee",
-      "0% intro APR for 18 months on balance transfers",
-      "No balance transfer fee for first 60 days"
-    ],
-    "best_for": [
-      "Balance Transfers",
-      "Building Credit",
-      "No Annual Fee"
-    ]
-  },
-  {
     "id": "chase-united-explorer",
-    "name": "Chase United℠ Explorer Card",
+    "name": "Chase United Explorer Card",
     "issuer": "Chase",
     "card_type": "Airline",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "21.24% - 28.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/chase-united-explorer.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/ec9ccd68-24a4-4604-8e49-a4175f671b90/54e5417ae8e0127a5b57ca01859dad288e525ffc524fc8723200871f5c663e19.jpg",
     "rewards_structure": [
       {
         "category": "United Airlines",
@@ -924,7 +647,7 @@
     "credit_score_range": "Good to Excellent",
     "annual_fee": 95,
     "apr_range": "21.24% - 28.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/chase-world-of-hyatt.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/959bec2f-0a65-40dc-b5e1-ed2808e9c92e/d596ff41a9cc9da840a0dbde922df4de6e6da81b26137a3f20b0aea449bfe3da.jpg",
     "rewards_structure": [
       {
         "category": "Hyatt Hotels",
@@ -976,7 +699,7 @@
     "credit_score_range": "Good to Excellent",
     "annual_fee": 99,
     "apr_range": "21.24% - 28.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/chase-ihg-one-rewards.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/4bd21825-b06b-4254-be4c-e1d2df558dda/e09efdcd95dc7d3cc76a7ffd205ff26d5458a95acb152a26e19b1e5cf00c3155.jpg",
     "rewards_structure": [
       {
         "category": "IHG Hotels",
@@ -1016,13 +739,13 @@
   },
   {
     "id": "chase-southwest-rapid-rewards-plus",
-    "name": "Chase Southwest Rapid Rewards® Plus Credit Card",
+    "name": "Chase Southwest Rapid Rewards Plus Credit Card",
     "issuer": "Chase",
     "card_type": "Airline",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 99,
     "apr_range": "21.24% - 28.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/chase-southwest-plus.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/24bd4736-2e44-4530-a828-25cd799a34b7/e99b7c2e247acbd8d215efba93f481c0eb394e2a0d889fa13ca27c11d220bfbf.jpg",
     "rewards_structure": [
       {
         "category": "Southwest Airlines",
@@ -1062,13 +785,13 @@
   },
   {
     "id": "chase-southwest-rapid-rewards-priority",
-    "name": "Chase Southwest Rapid Rewards® Priority Credit Card",
+    "name": "Chase Southwest Rapid Rewards Priority Credit Card",
     "issuer": "Chase",
     "card_type": "Airline",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 149,
     "apr_range": "21.24% - 28.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/chase-southwest-priority.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/0f98762d-d5f3-4376-ab23-22cc950b4a5c/9f6f43266caec467ba079548a9bc795e7437c4f4776e61e2c3bb900d027a43e9.jpg",
     "rewards_structure": [
       {
         "category": "Southwest Airlines",
@@ -1107,271 +830,14 @@
     ]
   },
   {
-    "id": "chase-amazon-prime-rewards",
-    "name": "Chase Amazon Prime Rewards Visa Signature Card",
-    "issuer": "Chase",
-    "card_type": "Retail",
-    "credit_score_range": "Good to Excellent",
-    "annual_fee": 0,
-    "apr_range": "18.24% - 26.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/chase-amazon-prime-rewards.jpg",
-    "rewards_structure": [
-      {
-        "category": "Amazon and Whole Foods",
-        "rate": 5,
-        "unit": "percent",
-        "description": "5% back at Amazon.com and Whole Foods Market with an eligible Prime membership"
-      },
-      {
-        "category": "Gas and Dining",
-        "rate": 2,
-        "unit": "percent",
-        "description": "2% back at gas stations, restaurants, and on local transit and commuting"
-      },
-      {
-        "category": "General",
-        "rate": 1,
-        "unit": "percent",
-        "description": "1% back on all other purchases"
-      }
-    ],
-    "intro_bonus": {
-      "bonus_amount": 200,
-      "spend_requirement": null,
-      "time_frame_months": null,
-      "description": "$200 Amazon.com Gift Card instantly upon approval for Prime members."
-    },
-    "features_and_benefits": [
-      "No annual fee",
-      "No foreign transaction fees",
-      "Instant approval decision"
-    ],
-    "best_for": [
-      "Amazon Prime Members",
-      "Amazon Shopping",
-      "Whole Foods Shopping"
-    ]
-  },
-  {
-    "id": "chase-disney-premier-visa",
-    "name": "Chase Disney® Premier Visa® Card",
-    "issuer": "Chase",
-    "card_type": "Retail",
-    "credit_score_range": "Good to Excellent",
-    "annual_fee": 0,
-    "apr_range": "18.24% - 26.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/chase-disney-premier.jpg",
-    "rewards_structure": [
-      {
-        "category": "Disney Purchases",
-        "rate": 2,
-        "unit": "percent",
-        "description": "2% in Disney Rewards Dollars on card purchases at gas stations, grocery stores, restaurants and most Disney locations"
-      },
-      {
-        "category": "General",
-        "rate": 1,
-        "unit": "percent",
-        "description": "1% in Disney Rewards Dollars on all other card purchases"
-      }
-    ],
-    "intro_bonus": {
-      "bonus_amount": 300,
-      "spend_requirement": 1000,
-      "time_frame_months": 3,
-      "description": "Earn $300 in Disney Rewards Dollars after you spend $1,000 on purchases in the first 3 months."
-    },
-    "features_and_benefits": [
-      "No annual fee",
-      "Special Disney cardmember perks",
-      "Disney-themed card designs"
-    ],
-    "best_for": [
-      "Disney Fans",
-      "Disney Vacations",
-      "Disney Parks"
-    ]
-  },
-  {
-    "id": "rbfcu-platinum-rewards",
-    "name": "RBFCU Platinum Rewards Credit Card",
-    "issuer": "RBFCU",
-    "card_type": "Rewards",
-    "credit_score_range": "Good to Excellent",
-    "annual_fee": 0,
-    "apr_range": "13.25% - 18.00% Variable",
-    "image_url": "default",
-    "rewards_structure": [
-      {
-        "category": "Gas",
-        "rate": 3,
-        "unit": "points",
-        "description": "3x points on gas purchases"
-      },
-      {
-        "category": "Grocery",
-        "rate": 2,
-        "unit": "points",
-        "description": "2x points on grocery purchases"
-      },
-      {
-        "category": "General",
-        "rate": 1,
-        "unit": "points",
-        "description": "1x point on all other purchases"
-      }
-    ],
-    "intro_bonus": {
-      "bonus_amount": null,
-      "spend_requirement": null,
-      "time_frame_months": null,
-      "description": "No sign-up bonus currently available."
-    },
-    "features_and_benefits": [
-      "No annual fee",
-      "Competitive APR for credit union members"
-    ],
-    "best_for": [
-      "Credit Union Members",
-      "Low APR",
-      "Gas Rewards"
-    ]
-  },
-  {
-    "id": "rbfcu-cash-rewards",
-    "name": "RBFCU Cash Rewards Credit Card",
-    "issuer": "RBFCU",
-    "card_type": "Cashback",
-    "credit_score_range": "Good to Excellent",
-    "annual_fee": 0,
-    "apr_range": "13.25% - 18.00% Variable",
-    "image_url": "default",
-    "rewards_structure": [
-      {
-        "category": "Dining and Entertainment",
-        "rate": 2,
-        "unit": "percent",
-        "description": "2% cash back on dining and entertainment purchases"
-      },
-      {
-        "category": "Grocery",
-        "rate": 2,
-        "unit": "percent",
-        "description": "2% cash back on grocery purchases"
-      },
-      {
-        "category": "General",
-        "rate": 1,
-        "unit": "percent",
-        "description": "1% cash back on all other purchases"
-      }
-    ],
-    "intro_bonus": {
-      "bonus_amount": null,
-      "spend_requirement": null,
-      "time_frame_months": null,
-      "description": "No sign-up bonus currently available."
-    },
-    "features_and_benefits": [
-      "No annual fee",
-      "Competitive APR for credit union members"
-    ],
-    "best_for": [
-      "Credit Union Members",
-      "Dining Rewards",
-      "Low APR"
-    ]
-  },
-  {
-    "id": "rbfcu-low-rate",
-    "name": "RBFCU Low Rate Credit Card",
-    "issuer": "RBFCU",
-    "card_type": "Low APR",
-    "credit_score_range": "Good to Excellent",
-    "annual_fee": 0,
-    "apr_range": "9.25% - 15.00% Variable",
-    "image_url": "default",
-    "rewards_structure": [],
-    "intro_bonus": {
-      "bonus_amount": null,
-      "spend_requirement": null,
-      "time_frame_months": null,
-      "description": "No rewards or sign-up bonus. Focus is on low APR."
-    },
-    "features_and_benefits": [
-      "No annual fee",
-      "Very low ongoing APR",
-      "Credit union member benefits"
-    ],
-    "best_for": [
-      "Low APR",
-      "Credit Union Members",
-      "Carrying Balances"
-    ]
-  },
-  {
-    "id": "rbfcu-platinum",
-    "name": "RBFCU Platinum Credit Card",
-    "issuer": "RBFCU",
-    "card_type": "Basic",
-    "credit_score_range": "Fair to Good",
-    "annual_fee": 0,
-    "apr_range": "15.25% - 18.00% Variable",
-    "image_url": "default",
-    "rewards_structure": [],
-    "intro_bonus": {
-      "bonus_amount": null,
-      "spend_requirement": null,
-      "time_frame_months": null,
-      "description": "No rewards or sign-up bonus. Basic credit building card."
-    },
-    "features_and_benefits": [
-      "No annual fee",
-      "Basic credit card features",
-      "Credit union member benefits"
-    ],
-    "best_for": [
-      "Building Credit",
-      "Credit Union Members",
-      "Basic Credit Needs"
-    ]
-  },
-  {
-    "id": "rbfcu-secured",
-    "name": "RBFCU Secured Credit Card",
-    "issuer": "RBFCU",
-    "card_type": "Secured",
-    "credit_score_range": "Poor to Fair",
-    "annual_fee": 0,
-    "apr_range": "18.00% Variable",
-    "image_url": "default",
-    "rewards_structure": [],
-    "intro_bonus": {
-      "bonus_amount": null,
-      "spend_requirement": null,
-      "time_frame_months": null,
-      "description": "No sign-up bonus. Focus is on building credit."
-    },
-    "features_and_benefits": [
-      "No annual fee",
-      "Secured card that reports to all 3 credit bureaus",
-      "Credit union member benefits"
-    ],
-    "best_for": [
-      "Building Credit",
-      "Secured Cards",
-      "Credit Union Members"
-    ]
-  },
-  {
     "id": "citi-double-cash",
-    "name": "Citi® Double Cash Card",
+    "name": "Citi Double Cash Card",
     "issuer": "Citibank",
     "card_type": "Cashback",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "19.24% - 29.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r/citi-double-cash.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/2a5d5681-8a3b-4e4c-9509-7476a4d3290d/e336c70dca87c32aab9a7bb224023d69a2e3920fa2ed2acce940f2f4f4a6956e.jpg",
     "rewards_structure": [
       {
         "category": "General",
@@ -1398,150 +864,14 @@
     ]
   },
   {
-    "id": "citi-premier",
-    "name": "Citi Premier® Card",
-    "issuer": "Citibank",
-    "card_type": "Travel",
-    "credit_score_range": "Good to Excellent",
-    "annual_fee": 95,
-    "apr_range": "21.24% - 28.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s/citi-premier.jpg",
-    "rewards_structure": [
-      {
-        "category": "Travel",
-        "rate": 3,
-        "unit": "points",
-        "description": "3x points on air travel and hotels"
-      },
-      {
-        "category": "Gas",
-        "rate": 3,
-        "unit": "points",
-        "description": "3x points on gas stations and EV charging stations"
-      },
-      {
-        "category": "Grocery",
-        "rate": 3,
-        "unit": "points",
-        "description": "3x points on supermarkets"
-      },
-      {
-        "category": "Restaurants",
-        "rate": 3,
-        "unit": "points",
-        "description": "3x points on restaurants"
-      },
-      {
-        "category": "General",
-        "rate": 1,
-        "unit": "points",
-        "description": "1x point on all other purchases"
-      }
-    ],
-    "intro_bonus": {
-      "bonus_amount": 80000,
-      "spend_requirement": 4000,
-      "time_frame_months": 3,
-      "description": "80,000 bonus points after you spend $4,000 on purchases in the first 3 months."
-    },
-    "features_and_benefits": [
-      "No foreign transaction fees",
-      "Transfer points to airline and hotel partners"
-    ],
-    "best_for": [
-      "Travel",
-      "Multiple Bonus Categories",
-      "Point Transfers"
-    ]
-  },
-  {
-    "id": "citi-custom-cash",
-    "name": "Citi® Custom Cash℠ Card",
-    "issuer": "Citibank",
-    "card_type": "Cashback",
-    "credit_score_range": "Good to Excellent",
-    "annual_fee": 0,
-    "apr_range": "19.24% - 29.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/citi-custom-cash.jpg",
-    "rewards_structure": [
-      {
-        "category": "Top Eligible Category",
-        "rate": 5,
-        "unit": "percent",
-        "description": "5% cash back on up to $500 spent in your top eligible spending category each billing cycle"
-      },
-      {
-        "category": "General",
-        "rate": 1,
-        "unit": "percent",
-        "description": "1% cash back on all other purchases"
-      }
-    ],
-    "intro_bonus": {
-      "bonus_amount": 200,
-      "spend_requirement": 1500,
-      "time_frame_months": 6,
-      "description": "$200 cash back after you spend $1,500 on purchases in the first 6 months."
-    },
-    "features_and_benefits": [
-      "No annual fee",
-      "Automatic 5% category selection"
-    ],
-    "best_for": [
-      "Automatic Category Optimization",
-      "Cashback",
-      "No Annual Fee"
-    ]
-  },
-  {
-    "id": "citi-rewards-plus",
-    "name": "Citi Rewards+® Card",
-    "issuer": "Citibank",
-    "card_type": "Rewards",
-    "credit_score_range": "Good to Excellent",
-    "annual_fee": 0,
-    "apr_range": "18.24% - 28.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/citi-rewards-plus.jpg",
-    "rewards_structure": [
-      {
-        "category": "Supermarkets and Gas",
-        "rate": 2,
-        "unit": "points",
-        "description": "2x points at supermarkets and gas stations (on up to $6,000 per year, then 1x)"
-      },
-      {
-        "category": "General",
-        "rate": 1,
-        "unit": "points",
-        "description": "1x point on all other purchases"
-      }
-    ],
-    "intro_bonus": {
-      "bonus_amount": 15000,
-      "spend_requirement": 1000,
-      "time_frame_months": 3,
-      "description": "Earn 15,000 bonus points after you spend $1,000 on purchases in the first 3 months."
-    },
-    "features_and_benefits": [
-      "No annual fee",
-      "Points rounded up to nearest 10 on every purchase",
-      "No expiration on points"
-    ],
-    "best_for": [
-      "Point Rounding",
-      "Supermarkets",
-      "Gas Stations"
-    ]
-  },
-  {
     "id": "citi-aadvantage-platinum-select",
-    "name": "Citi® / AAdvantage® Platinum Select® World Elite Mastercard®",
+    "name": "Citi / AAdvantage Platinum Select World Elite Mastercard",
     "issuer": "Citibank",
     "card_type": "Airline",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 99,
     "apr_range": "21.24% - 28.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/citi-aadvantage-platinum-select.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/62efaeec-23e5-4209-90e8-ced21f218051/a44cc1eeca93afd863dc9cb46e8b8be914192faf8bd7925a5691e09a54e9f328.jpg",
     "rewards_structure": [
       {
         "category": "American Airlines",
@@ -1581,13 +911,13 @@
   },
   {
     "id": "citi-diamond-preferred",
-    "name": "Citi® Diamond Preferred® Card",
+    "name": "Citi Diamond Preferred Card",
     "issuer": "Citibank",
     "card_type": "Low APR",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "18.24% - 28.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/citi-diamond-preferred.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/cb1d60ff-bf72-4b4e-b702-2aa42ba59d40/733a19f3cd2a42d851b2e863b33b2fd2f0d30dcec8cbe635e5509506632f4e56.jpg",
     "rewards_structure": [],
     "intro_bonus": {
       "bonus_amount": null,
@@ -1608,13 +938,13 @@
   },
   {
     "id": "citi-simplicity",
-    "name": "Citi® Simplicity® Card",
+    "name": "Citi Simplicity Card",
     "issuer": "Citibank",
     "card_type": "Low APR",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "18.24% - 28.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/citi-simplicity.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/697cec98-8d25-45e2-b5d4-24f76d6860c2/9a8fc498f6c06c50e9a8024d58f24ea2f2d931a939311290b69e1ba15ba6e069.jpg",
     "rewards_structure": [],
     "intro_bonus": {
       "bonus_amount": null,
@@ -1635,41 +965,14 @@
     ]
   },
   {
-    "id": "citi-secured-mastercard",
-    "name": "Citi® Secured Mastercard®",
-    "issuer": "Citibank",
-    "card_type": "Secured",
-    "credit_score_range": "Poor to Fair",
-    "annual_fee": 0,
-    "apr_range": "24.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/citi-secured-mastercard.jpg",
-    "rewards_structure": [],
-    "intro_bonus": {
-      "bonus_amount": null,
-      "spend_requirement": null,
-      "time_frame_months": null,
-      "description": "No sign-up bonus. Focus is on building credit."
-    },
-    "features_and_benefits": [
-      "No annual fee",
-      "Secured card that reports to all 3 credit bureaus",
-      "Possibility to upgrade to unsecured card"
-    ],
-    "best_for": [
-      "Building Credit",
-      "Secured Cards",
-      "No Annual Fee"
-    ]
-  },
-  {
     "id": "citi-costco-anywhere-visa",
-    "name": "Citi® Costco Anywhere Visa® Card",
+    "name": "Citi Costco Anywhere Visa Card",
     "issuer": "Citibank",
     "card_type": "Retail",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "18.24% - 26.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/citi-costco-anywhere-visa.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/55e47fc1-e5b0-4006-b969-d6cf8c24c80f/b60634a081f84e0e3629c4404c542557c5ce9531825352d66c3075e2d6f3656e.jpg",
     "rewards_structure": [
       {
         "category": "Gas",
@@ -1715,7 +1018,7 @@
   },
   {
     "id": "amex-platinum",
-    "name": "The Platinum Card® from American Express",
+    "name": "The Platinum Card from American Express",
     "issuer": "American Express",
     "card_type": "Premium Travel",
     "credit_score_range": "Excellent",
@@ -1761,13 +1064,13 @@
   },
   {
     "id": "amex-gold",
-    "name": "American Express® Gold Card",
+    "name": "American Express Gold Card",
     "issuer": "American Express",
     "card_type": "Travel",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 250,
     "apr_range": "See Pay Over Time APR",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/5e6f7g8h-9i0j-1k2l-3m4n-5o6p7q8r9s0t/amex-gold.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/2921dc2e-e2b0-4003-82af-f6ca0f575d1c/9939cc4d8238dcd5ad2100cc9696bd6e5999526b1b8b99e9296ca85a800a83e6.jpg",
     "rewards_structure": [
       {
         "category": "Dining",
@@ -1813,13 +1116,13 @@
   },
   {
     "id": "amex-blue-cash-preferred",
-    "name": "Blue Cash Preferred® Card from American Express",
+    "name": "Blue Cash Preferred Card from American Express",
     "issuer": "American Express",
     "card_type": "Cashback",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 95,
     "apr_range": "19.24% - 29.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/6f7g8h9i-0j1k-2l3m-4n5o-6p7q8r9s0t1u/amex-blue-cash-preferred.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/2681330d-450d-4f71-af38-3cb16f592c02/596f22094df609999878f43629debc8d416e18334ea8f5e68f9d92a72dd0b912.jpg",
     "rewards_structure": [
       {
         "category": "Supermarkets",
@@ -1870,13 +1173,13 @@
   },
   {
     "id": "amex-green",
-    "name": "The American Express® Green Card",
+    "name": "The American Express Green Card",
     "issuer": "American Express",
     "card_type": "Travel",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 150,
     "apr_range": "See Pay Over Time APR",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/amex-green.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/80e63991-a911-4f89-8949-793539183c96/ee9b887e38cd165e7dbc530c41059d2e48916dd06d00019881e5ceb12456e262.jpg",
     "rewards_structure": [
       {
         "category": "Travel",
@@ -1915,13 +1218,13 @@
   },
   {
     "id": "amex-blue-cash-everyday",
-    "name": "Blue Cash Everyday® Card from American Express",
+    "name": "Blue Cash Everyday Card from American Express",
     "issuer": "American Express",
     "card_type": "Cashback",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "18.24% - 29.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/amex-blue-cash-everyday.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/5ed2eb69-5e8c-4014-b8b7-23c4d600591c/bfccadb4c5dc3dc5a88464e70bf2c7339280bf494e9c8fad0ee4e5230c465dc4.jpg",
     "rewards_structure": [
       {
         "category": "Supermarkets",
@@ -1966,13 +1269,13 @@
   },
   {
     "id": "wells-fargo-active-cash",
-    "name": "Wells Fargo Active Cash® Card",
+    "name": "Wells Fargo Active Cash Card",
     "issuer": "Wells Fargo",
     "card_type": "Cashback",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "19.24% - 29.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/7g8h9i0j-1k2l-3m4n-5o6p-7q8r9s0t1u2v/wells-fargo-active-cash.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/b954a46c-caec-11eb-abf1-efb90fc6e740/403a0deae03eaff0d1ca2c7ab1175fcc45ebc9a9551d0c8104e758b3d82771d1.jpg",
     "rewards_structure": [
       {
         "category": "General",
@@ -1999,7 +1302,7 @@
   },
   {
     "id": "wells-fargo-reflect",
-    "name": "Wells Fargo Reflect® Card",
+    "name": "Wells Fargo Reflect Card",
     "issuer": "Wells Fargo",
     "card_type": "Low APR",
     "credit_score_range": "Good to Excellent",
@@ -2025,13 +1328,13 @@
   },
   {
     "id": "wells-fargo-autograph",
-    "name": "Wells Fargo Autograph℠ Card",
+    "name": "Wells Fargo Autograph Card",
     "issuer": "Wells Fargo",
     "card_type": "Rewards",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "19.24% - 29.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w/wells-fargo-autograph.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/157b4328-dd47-11ec-9440-d76f3e69ff2f/a8519165ae6b4483f70248426b216adf2db389e7289cb32c2b02e895dc2e09b2.jpg",
     "rewards_structure": [
       {
         "category": "Dining",
@@ -2094,13 +1397,13 @@
   },
   {
     "id": "wells-fargo-autograph-journey",
-    "name": "Wells Fargo Autograph Journey℠ Visa® Card",
+    "name": "Wells Fargo Autograph Journey Visa Card",
     "issuer": "Wells Fargo",
     "card_type": "Travel",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 95,
     "apr_range": "19.24% - 29.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/wells-fargo-autograph-journey.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/86e12ccc-e0c3-11ee-8503-335696b6ab66/86906b16658243ba3c0eefd1a18bfe98808014451341a6d95f7ba3b55dd754c3.jpg",
     "rewards_structure": [
       {
         "category": "Travel",
@@ -2145,40 +1448,14 @@
     ]
   },
   {
-    "id": "wells-fargo-secured",
-    "name": "Wells Fargo Secured Credit Card",
-    "issuer": "Wells Fargo",
-    "card_type": "Secured",
-    "credit_score_range": "Poor to Fair",
-    "annual_fee": 25,
-    "apr_range": "28.99% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/wells-fargo-secured.jpg",
-    "rewards_structure": [],
-    "intro_bonus": {
-      "bonus_amount": null,
-      "spend_requirement": null,
-      "time_frame_months": null,
-      "description": "No sign-up bonus. Focus is on building credit."
-    },
-    "features_and_benefits": [
-      "Secured card that reports to all 3 credit bureaus",
-      "Possibility to upgrade to unsecured card"
-    ],
-    "best_for": [
-      "Building Credit",
-      "Secured Cards",
-      "Credit Repair"
-    ]
-  },
-  {
     "id": "discover-it-student-cash-back",
-    "name": "Discover it® Student Cash Back",
+    "name": "Discover it Student Cash Back",
     "issuer": "Discover",
     "card_type": "Student",
     "credit_score_range": "Fair to Good",
     "annual_fee": 0,
     "apr_range": "18.24% - 27.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/discover-it-student-cash-back.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/44278d8b-631e-49c9-90df-f11b6e101539/1e30d48429dfe33c0d61d0c069acfec0e1328a89851742e18d6e6056cb272769.jpg",
     "rewards_structure": [
       {
         "category": "Rotating Categories",
@@ -2213,13 +1490,13 @@
   },
   {
     "id": "discover-it-balance-transfer",
-    "name": "Discover it® Balance Transfer",
+    "name": "Discover it Balance Transfer",
     "issuer": "Discover",
     "card_type": "Balance Transfer",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "18.24% - 27.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/discover-it-balance-transfer.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/a4a36a73-0294-4ca1-b36b-3eef5cee53ca/a1de1f5a52d4ab48b729c2ea25588d40b1b0382c84ddac318b584f1d62aa37bd.jpg",
     "rewards_structure": [
       {
         "category": "General",
@@ -2247,13 +1524,13 @@
   },
   {
     "id": "discover-it-cash-back",
-    "name": "Discover it® Cash Back",
+    "name": "Discover it Cash Back",
     "issuer": "Discover",
     "card_type": "Cashback",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "18.24% - 27.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/9i0j1k2l-3m4n-5o6p-7q8r-9s0t1u2v3w4x/discover-it-cash-back.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/a4a36a73-0294-4ca1-b36b-3eef5cee53ca/a1de1f5a52d4ab48b729c2ea25588d40b1b0382c84ddac318b584f1d62aa37bd.jpg",
     "rewards_structure": [
       {
         "category": "Rotating Categories",
@@ -2287,7 +1564,7 @@
   },
   {
     "id": "discover-it-secured",
-    "name": "Discover it® Secured Credit Card",
+    "name": "Discover it Secured Credit Card",
     "issuer": "Discover",
     "card_type": "Secured",
     "credit_score_range": "Poor to Fair",
@@ -2325,13 +1602,13 @@
   },
   {
     "id": "discover-it-miles",
-    "name": "Discover it® Miles",
+    "name": "Discover it Miles",
     "issuer": "Discover",
     "card_type": "Travel",
     "credit_score_range": "Good to Excellent",
     "annual_fee": 0,
     "apr_range": "18.24% - 27.24% Variable",
-    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/0j1k2l3m-4n5o-6p7q-8r9s-0t1u2v3w4x5y/discover-it-miles.jpg",
+    "image_url": "https://www.nerdwallet.com/cdn-cgi/image/width=300,quality=100/cdn/images/marketplace/credit_cards/43dae5e5-7981-42ea-9d14-6e28001808dd/cefc066e00b65be0861fed2a7757aa4c0d2da4b80b973c78a584539473007fd7.jpg",
     "rewards_structure": [
       {
         "category": "General",
